@@ -37,7 +37,7 @@
 
 .text-preset-5-medium {
   font-size: 18px;
-  line-height: 130%;
+  line-height: 100%;
   letter-spacing: 0px;
 }
 
@@ -74,16 +74,18 @@ main {
     flex-direction: row;
     min-height: 100vh;
     align-items: center;
+    background: hsl(221, 100%, 96%);
   }
 }
-@media (min-width: 1440px) {
-  main {
+@media (min-width: 768px) {
+  .wrapper {
+    display: flex;
     flex-direction: row;
-    min-height: 100vh;
-    align-items: center;
+    background: hsl(0, 100%, 100%);
+    border-radius: 24px;
+    box-shadow: 0 22px 32px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.06);
   }
 }
-
 @media (min-width: 768px) {
   .panel {
     max-width: 686px;
@@ -95,32 +97,21 @@ main {
   }
 }
 .panel--result {
-  background: purple;
+  background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
   height: 60svh;
+  border-radius: 0 0 28px 28px;
 }
 @media (min-width: 768px) {
   .panel--result {
     height: 55svh;
     width: 60svh;
-  }
-}
-@media (min-width: 1440px) {
-  .panel--result {
-    height: 55svh;
-    width: 60svh;
+    border-radius: 28px;
   }
 }
 .panel--summary {
-  background: green;
   height: 40svh;
 }
 @media (min-width: 768px) {
-  .panel--summary {
-    height: 55svh;
-    width: 40svh;
-  }
-}
-@media (min-width: 1440px) {
   .panel--summary {
     height: 55svh;
     width: 40svh;
