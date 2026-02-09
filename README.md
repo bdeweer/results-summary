@@ -40,8 +40,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://bdeweer.github.io/results-summary/](https://bdeweer.github.io/results-summary/)
+- Live Site URL: [https://bdeweer.github.io/results-summary/](https://bdeweer.github.io/results-summary/)
 
 ## My process
 
