@@ -141,6 +141,7 @@ main {
 }
 
 .panel {
+  text-align: center;
   @media (min-width: $bp-tablet) {
     max-width: $tablet-width;
   }
@@ -156,10 +157,32 @@ main {
 
     @media (min-width: $bp-tablet) {
       height: 55svh;
-      width: 60svh;
+      width: 50svh;
       border-radius: 28px;
     }
     @media (min-width: $bp-desktop) {
+    }
+
+    &--container {
+      @media (min-width: $bp-tablet) {
+      }
+      @media (min-width: $bp-desktop) {
+      }
+
+      padding-block: 50px;
+      padding-inline: 45px;
+
+      &--score--container {
+        background: $gradient-2;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-block: 50px;
+        margin-inline: 45px;
+      }
     }
   }
 
@@ -168,7 +191,7 @@ main {
 
     @media (min-width: $bp-tablet) {
       height: 55svh;
-      width: 40svh;
+      width: 50svh;
     }
     @media (min-width: $bp-desktop) {
     }
