@@ -134,14 +134,19 @@ $color-green-50: var(--color-green-50);
 
 main {
   display: flex;
-  justify-content: center;
+
   flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  min-height: 100vh;
 
   @media (min-width: $bp-tablet) {
     flex-direction: row;
-    min-height: 100vh;
+
     align-items: center;
     background: $color-navy-50;
+    justify-content: center;
   }
 }
 
@@ -168,39 +173,55 @@ main {
 
   &--result {
     background: $gradient-2;
-    height: 60svh;
+
+    margin: 0;
+    padding: 0;
     border-radius: 0 0 28px 28px;
     display: flex;
     text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
 
     @media (min-width: $bp-tablet) {
-      height: 55svh;
-      width: 40svh;
+      width: 40dvh;
       border-radius: 25px;
     }
 
     &--container {
-      flex-direction: column;
-      margin: $spacing-500;
+      margin-block: $spacing-200;
+      margin-inline: $spacing-500;
+      @media (min-width: $bp-tablet) {
+        margin: $spacing-500;
+      }
 
       &--score {
-        height: 70%;
+        flex: 1;
+        display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         h2 {
           color: $color-navy-200;
         }
 
         &--point {
-          background: $gradient-1;
-          border-radius: 50%;
+          background: $gradient-2;
           aspect-ratio: 1 / 1;
-          display: flex;
-          flex-direction: column;
+          width: 100%;
+          max-width: 120px;
+          max-height: 120px;
+          align-content: center;
+          border-radius: 100px;
+          margin-block: $spacing-200;
+          margin-inline: $spacing-200;
 
-          margin-block: $spacing-400;
-          margin-inline: $spacing-400;
-          justify-content: center;
+          @media (min-width: $bp-tablet) {
+            margin-block: $spacing-400;
+            margin-inline: $spacing-400;
+            max-width: 180px;
+            max-height: 180px;
+          }
 
           div:first-child {
             color: $color-white;
@@ -208,13 +229,12 @@ main {
 
           div:nth-child(2) {
             color: $color-navy-200;
+            opacity: 51%;
           }
         }
       }
 
       &--status {
-        height: 30%;
-
         h3 {
           color: $color-white;
         }
@@ -226,18 +246,14 @@ main {
 
       &--status > * + p {
         margin-top: $spacing-200;
-      }
-
-      @media (min-width: $bp-tablet) {
-      }
-      @media (min-width: $bp-desktop) {
+        @media (min-width: $bp-tablet) {
+          margin-top: $spacing-400;
+        }
       }
     }
   }
 
   &--summary {
-    height: 40svh;
-
     @media (min-width: $bp-tablet) {
       height: 55svh;
       width: 40svh;
@@ -246,7 +262,11 @@ main {
     &--container {
       display: flex;
       flex-direction: column;
-      margin: $spacing-500;
+      margin-block: $spacing-200;
+      margin-inline: $spacing-500;
+      @media (min-width: $bp-tablet) {
+        margin: $spacing-500;
+      }
 
       p {
         color: color-navy-950;
@@ -256,7 +276,10 @@ main {
 }
 
 .grid {
-  margin-top: $spacing-400;
+  @media (min-width: $bp-tablet) {
+    margin-top: $spacing-400;
+  }
+  margin-top: $spacing-200;
   display: grid;
   width: 100%;
 }
@@ -314,11 +337,15 @@ main {
 
 .row {
   margin-block: 0 $spacing-200;
-  padding-block: 10px;
+  padding-block: $spacing-100;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
-  padding-inline: 15px;
+  padding-inline: $spacing-200;
+
+  @media (min-width: $bp-tablet) {
+    padding-block: $spacing-200;
+  }
 }
 
 .icone {
@@ -332,4 +359,8 @@ main {
   padding-block: $spacing-200;
   margin-block: $spacing-200;
   color: $color-white;
+
+  @media (min-width: $bp-tablet) {
+    margin-block: $spacing-200;
+  }
 }
