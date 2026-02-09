@@ -364,15 +364,3 @@ main {
     margin-block: $spacing-200;
   }
 }
-
-button {
-  border: none;
-  outline: none;
-  background: none;
-}
-button:focus,
-button:focus-visible,
-button:focus-within {
-  outline: none;
-  box-shadow: none;
-}
